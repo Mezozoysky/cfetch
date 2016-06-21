@@ -38,7 +38,7 @@ message( "-- ${CMAKE_PROJECT_NAME} -- Compiler version: ${CMAKE_CXX_COMPILER_VER
 
 if( "${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" )
     set( CMAKE_CXX_FLAGS "-std=c++11" )
-elseif( "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" )
+elseif( "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang" )
     set( CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++" )
 else()
     #TODO: investigate what to do on windows

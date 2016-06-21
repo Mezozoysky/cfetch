@@ -65,5 +65,6 @@ target_link_libraries( cfetch ${CF_TOOL_OS_SPECIFIC_LIBS} )
 
 install(
     TARGETS cfetch
+    BUNDLE DESTINATION bin
     RUNTIME DESTINATION bin
 )
